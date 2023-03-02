@@ -140,7 +140,14 @@ jobs:
         cd openwrt
         mkdir -p files/etc/opkg/
         cp $GITHUB_WORKSPACE/Diy/customfeeds.conf files/etc/opkg/customfeeds.conf -v
-        chmod -R 755 .    
+        chmod -R 755 .   
+        
+    - name: 修改防火墙参数
+      run: |
+        cd openwrt
+        mkdir -p files/etc/
+        cp $GITHUB_WORKSPACE/Diy/firewall.user files/etc/firewall.user -v
+        chmod -R 755 .
         
     - name: 编译固件
       id: compile
