@@ -199,7 +199,8 @@ jobs:
               相对主页插件的截图：-ikoolproxy+Adguard Home+网易云音乐解锁
               
               更新说明：
-              2023-0303：添加软件源，添加防火墙自定义参数
+              2023-0303: 添加软件源，添加防火墙自定义参数.
+              2023-0306: 内核更新到最新，插件同步上游更新.
               
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
