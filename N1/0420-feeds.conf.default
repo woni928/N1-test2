@@ -7,8 +7,7 @@ src-git passwall https://github.com/xiaorouji/openwrt-passwall.git
 src-git openclash https://github.com/vernesong/OpenClash.git
 src-git ikoolproxy https://github.com/ilxp/luci-app-ikoolproxy.git
 src-git alist https://github.com/sbwml/luci-app-alist.git
-src-git amlogic https://github.com/ophub/luci-app-amlogic.git 
-
+src-git amlogic https://github.com/ophub/luci-app-amlogic.git
 #src-git small8 https://github.com/kenzok8/small-package
 #src-git kenzok https://github.com/kenzok8/openwrt-packages
 #src-git small https://github.com/kenzok8/small
