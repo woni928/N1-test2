@@ -13,7 +13,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/0218-feeds.conf.default
-  CONFIG_FILE: N1/0223.config
+  CONFIG_FILE: N1/0223-1.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -202,6 +202,7 @@ jobs:
               2023-0303: 添加软件源，添加防火墙自定义参数.
               2023-0306: 内核更新到最新，插件同步上游更新.
               2023-0325: 内核及其插件同步上游更新。
+              2023-0422: 添加dns缓存，同步上游更新。
               
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
