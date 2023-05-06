@@ -210,6 +210,7 @@ jobs:
               子网掩码：255.255.255.0
               网关：192.168.123.2
               用户名：root
+              密码：password
               刷入EMMC命令: ./install-to-emmc.sh
               kissyouhunter大佬的其它插件一键安装脚本：
               bash <(curl -s -S -L nb0.cc/kiss)
