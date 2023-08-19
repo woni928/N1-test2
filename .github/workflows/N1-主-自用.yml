@@ -144,7 +144,7 @@ jobs:
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: ham
-        OPENWRT_VER: R23.3.3
+        OPENWRT_VER: R23.7.7
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
         KERNEL_AUTO_LATEST: true
@@ -180,7 +180,7 @@ jobs:
               2023-0325:内核及其插件同步上游更新。
               2023-0422:修复编译出错，添加dns缓存，同步上游插件的更新。
               2023-0507:同步上游的更新。
-              2023-0818:尝试修复passwal的问题---主路由 自用
+              2023-0820:同步上游的更新。
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
