@@ -185,7 +185,7 @@ jobs:
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: ham
-        OPENWRT_VER: R23.3.3
+        OPENWRT_VER: R23.7.7
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
         KERNEL_AUTO_LATEST: true
@@ -229,6 +229,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: 7
+          retain_days: 31
           #retain_days: ${{ github.event.inputs.action_days }}
           
