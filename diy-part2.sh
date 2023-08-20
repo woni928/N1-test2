@@ -13,12 +13,6 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/files/bin/config_generate
 
-#修改主机名为N1
-sed -i 's/OpenWrt/N1/g' package/base-files/files/bin/config_generate
-
-# 添加旁路由防火墙
-echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
-
 # 增加 alist （在 ./scripts/feeds install -a 操作之后更换 golang 版本）
 #rm -rf feeds/packages/lang/golang
 #svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
