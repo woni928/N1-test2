@@ -1,5 +1,5 @@
 
-name: N1-5.4.X-kiss
+name: N1--5.4.X-kiss
 
 on:
   repository_dispatch:
@@ -156,7 +156,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         name: OpenWrt-N1 → ${{ env.DATE }}
-        tag: N1-自用_${{ env.tag_name }}
+        tag: N1-kiss_${{ env.tag_name }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -176,7 +176,7 @@ jobs:
               2023-0422:修复编译出错，添加dns缓存，同步上游插件的更新。
               2023-0507:同步上游的更新。
               2023-0814:同步上游的更新。
-              2023-0820:部分插件有所变动，同步上游的更新。
+              2023-0821:插件有所变动，同步上游的更新。
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
@@ -184,6 +184,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: 60
+          retain_days: 7
           #retain_days: ${{ github.event.inputs.action_days }}
           
