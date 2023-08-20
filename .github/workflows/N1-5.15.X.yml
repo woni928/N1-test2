@@ -12,7 +12,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/0218-feeds.conf.default
-  CONFIG_FILE: N1/0223.config
+  CONFIG_FILE: N1/0223-1.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -143,6 +143,7 @@ jobs:
       uses: unifreq/openwrt_packit@master
       env:
         WHOAMI: ham
+        OPENWRT_VER: R23.08.18
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
         KERNEL_AUTO_LATEST: true
@@ -168,7 +169,9 @@ jobs:
               kissyouhunter大佬的其它插件一键安装脚本：
               bash <(curl -s -S -L nb0.cc/kiss)
               相对主页插件的截图：-ikoolproxy+Adguard Home+网易云音乐解锁
-          
+
+              2023-0820：同步上游的更新。
+              
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
       with:
