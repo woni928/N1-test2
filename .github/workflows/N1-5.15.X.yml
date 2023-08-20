@@ -12,7 +12,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/0218-feeds.conf.default
-  CONFIG_FILE: N1/0223-1.config
+  CONFIG_FILE: N1/0223.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -106,7 +106,8 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-               
+        
+        
     - name: 编译固件
       id: compile
       run: |
@@ -155,29 +156,29 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         name: OpenWrt-N1 → ${{ env.DATE }}
-        tag: N1-高内核_${{ env.tag_name }}
+        tag: N1-低内核_${{ env.tag_name }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
               ---  使用说明 ---
-                
+              
               网关：192.168.123.2
               用户名：root
               密码：password
               刷入EMMC命令: ./install-to-emmc.sh
               kissyouhunter大佬的其它插件一键安装脚本：
               bash <(curl -s -S -L nb0.cc/kiss)
-              相对主页插件的截图：-ikoolproxy+Adguard Home+网易云音乐解锁
-
-              2023-0820：同步上游的更新。
               
+              更新说明：
+              2023-0821:同步上游的更新。
+          
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
       with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: 60
+          retain_days: 7
           #retain_days: ${{ github.event.inputs.action_days }}
           
