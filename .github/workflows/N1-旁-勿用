@@ -1,5 +1,5 @@
 
-name: N1-旁路由-自用
+name: N1-旁-勿用
 
 on:
   repository_dispatch:
