@@ -156,17 +156,13 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         name: OpenWrt-N1 → ${{ env.DATE }}
-        tag: N1-低内核_${{ env.tag_name }}
+        tag: N1-主_${{ env.tag_name }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
               ---  使用说明 ---
               
-              自用固件，插件较少! 
-              默认旁路由模式 请手动设置IP
-              IP地址:192.168.123.X
-              子网掩码：255.255.255.0
               网关：192.168.123.2
               用户名：root
               密码：password
@@ -180,7 +176,7 @@ jobs:
               2023-0325:内核及其插件同步上游更新。
               2023-0422:修复编译出错，添加dns缓存，同步上游插件的更新。
               2023-0507:同步上游的更新。
-              2023-0820:同步上游的更新。
+              2023-0821:同步上游的更新。
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
@@ -188,6 +184,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
-          retain_days: 30
+          retain_days: 7
           #retain_days: ${{ github.event.inputs.action_days }}
           
