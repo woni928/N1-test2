@@ -171,7 +171,7 @@ jobs:
               bash <(curl -s -S -L nb0.cc/kiss)
               
               更新说明：
-              2023-0821:my。
+              2023-0821：my-第一版。
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
