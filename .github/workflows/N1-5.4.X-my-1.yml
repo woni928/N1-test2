@@ -1,5 +1,5 @@
 
-name: N1-5.4.X
+name: N1-5.4.X-my-1
 
 on:
   repository_dispatch:
@@ -12,7 +12,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: N1/0218-feeds.conf.default
-  CONFIG_FILE: N1/0222-1.config
+  CONFIG_FILE: N1/0821-my-1.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -171,12 +171,7 @@ jobs:
               bash <(curl -s -S -L nb0.cc/kiss)
               
               更新说明：
-              2023-0303:添加防火墙自定义参数。
-              2023-0306:更新内核到最新，修正内核名字，其他插件同步上游更新。
-              2023-0325:内核及其插件同步上游更新。
-              2023-0422:修复编译出错，添加dns缓存，同步上游插件的更新。
-              2023-0507:同步上游的更新。
-              2023-0821:同步上游的更新。
+              2023-0821：原来的基础上删增插件。
           
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
