@@ -40,7 +40,6 @@ jobs:
         remove-codeql: 'true'
         remove-docker-images: 'true'
 
-    steps:
     - name: Checkout
       uses: actions/checkout@v3
 
